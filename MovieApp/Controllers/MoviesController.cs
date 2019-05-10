@@ -27,11 +27,13 @@ namespace MovieApp.Controllers
         // GET: Movies
         public ViewResult Index()
         {
-           
-            return View();
+            if (User.IsInRole(RoleName.CanManageMovies))
+                return View("List");
+            return View("ReadOnlyList");
         }
 
         // Add New Movie
+        [Authorize(Roles = RoleName.CanManageMovies)]
         public ViewResult New()
         {
             var genres = _context.Genres.ToList();
