@@ -12,6 +12,7 @@ namespace MovieApp.Models
         [Required]
         [Display(Name = "Driving License")]
         public string DrivingLicense { get; set; }
+
         [Required]
         [StringLength(55)]
         public string Phone { get; set; }
