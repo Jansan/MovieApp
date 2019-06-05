@@ -32,5 +32,8 @@ namespace MovieApp.Models
         [Display(Name = "Number in Stock")]
         [Range(1, 20)]
         public Byte NumberInStock { get; set; }
+
+        public byte NumberAvailable { get; set; }
+
     }
 }

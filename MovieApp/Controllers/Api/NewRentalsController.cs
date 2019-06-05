@@ -1,4 +1,5 @@
 ﻿using MovieApp.Dtos;
+using MovieApp.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,9 +11,11 @@ namespace MovieApp.Controllers.Api
 {
     public class NewRentalsController : ApiController
     {
+        
         [HttpPost]
         public IHttpActionResult CreateNewRentals(NewRentalDto newRental)
         {
+            
             throw new NotImplementedException();
         }
     }
