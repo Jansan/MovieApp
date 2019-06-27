@@ -14,7 +14,8 @@ namespace MovieApp
                       "~/Scripts/bootbox.js",
                        "~/Scripts/datatables/jquery.datatables.js",
                         "~/Scripts/datatables/datatables.bootstrap.js",
-                        "~/Scripts/typeahead.bundle.js"
+                        "~/Scripts/typeahead.bundle.js",
+                        "~/Scripts/toastr.js"
 
 
                         ));
@@ -33,7 +34,9 @@ namespace MovieApp
                       "~/Content/bootstrap.css",
                       "~/content/datatables/css/datatables.bootstrap.css",
                       "~/content/typeahead.css",
-                      "~/Content/site.css"));
+                      "~/Content/toastr.css",
+                      "~/Content/site.css"
+                      ));
         }
     }
 }
