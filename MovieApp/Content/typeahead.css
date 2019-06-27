@@ -93,3 +93,6 @@
 .gist {
     font-size: 14px;
 }
+.tt-container{
+    position:relative;
+}
