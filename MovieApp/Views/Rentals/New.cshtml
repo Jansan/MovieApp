@@ -14,7 +14,7 @@
     <div class="form-group">
         <label>Customer</label>
         <div class="tt-container">
-            <input id="customer" type="text" value="" class="form-control" />
+            <input id="customer" required type="text" value="" class="form-control" />
         </div>
     </div>
 
@@ -34,6 +34,7 @@
     <button class="btn btn-primary">Submit</button>
 </form>
 @section scripts{
+    @Scripts.Render("~/bundle/jqueryval")
     <script>
         $(document).ready(function () {
 
@@ -84,6 +85,8 @@
 
                     vm.movieIds.push(movie.id);
                 });
+            $("#newRental")
+
             $("#newRental").submit(function (e) {
                 e.preventDefault();
 
