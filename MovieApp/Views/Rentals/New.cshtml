@@ -14,7 +14,7 @@
     <div class="form-group">
         <label>Customer</label>
         <div class="tt-container">
-            <input id="customer" required type="text" value="" class="form-control" />
+            <input id="customer" data-rule-validCustomer="true" required type="text" value="" class="form-control" />
         </div>
     </div>
 
@@ -34,7 +34,7 @@
     <button class="btn btn-primary">Submit</button>
 </form>
 @section scripts{
-    @Scripts.Render("~/bundle/jqueryval")
+    @Scripts.Render("~/bundles/jqueryval")
     <script>
         $(document).ready(function () {
 
@@ -85,10 +85,14 @@
 
                     vm.movieIds.push(movie.id);
                 });
-            $("#newRental")
 
-            $("#newRental").submit(function (e) {
-                e.preventDefault();
+            $.validator.addMethod("validCustomer", function () {
+                return vm.customerId && vm.customerId !== 0;
+            }, "Please select a valid customer.");
+
+            $("#newRental").validate({
+                submitHandler: function () {
+                    e.preventDefault();
 
                 $.ajax({
                     url: "/api/newRentals",
@@ -101,7 +105,9 @@
                     .fail(function () {
                         toastr.error("Somthing unexpected happened.");
                     });
+                }
             });
+
         });
     </script>
 }
