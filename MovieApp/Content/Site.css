@@ -35,6 +35,7 @@ input.error {
 .validation-summary-errors {
     color: #ff0000;
 }
+/*Navbar */
 .navbar-inverse {
     background-color: #BD0107 !important;
 }
@@ -49,4 +50,38 @@ input.error {
     color: #fff !important;
     margin-top: 18px !important;
     font-weight: bolder !important;
+}
+h1, .h1, h2, .h2, h3, .h3 {
+    margin-top: 50px !important;
+    margin-bottom: 20px !important;
+}
+/*Home Slider*/
+.carousel-item img{
+    width:100%;
+    height:auto;
+}
+.home-card{
+    margin-top:30px;
+}
+.home-card .card img{
+    width:100%;
+    height:auto;
+    margin:auto;
+}
+    /*Footer*/
+    footer {
+        background-color: #2E220C;
+        color: #fff;
+    }
+footer .fa-2x {
+        padding-top: 20px;
+        padding-right: 20px;
+        color: #FF4A17;
+}
+footer .footer-txt{
+    padding:20px;
+}
+footer .copy-right{
+    padding-top: 20px;
+    padding-right:40px;
 }

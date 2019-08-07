@@ -6,16 +6,33 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css"/>
 </head>
 <body>
     @Html.Partial("_NavBar")
     <div class="container body-content">
         @RenderBody()
         <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - MovieApp</p>
-        </footer>
+        <div class="container">
+            <footer>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <i class="fab fa-facebook fa-2x"></i>
+                            <i class="fab fa-twitter fa-2x"></i>
+                            <i class="fab fa-instagram fa-2x"></i>
+                        </div>
+                        <div class="col-md-4 footer-txt">
+                            <p>ndustry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                        </div>
+                        <div class="col-md-4 copy-right text-right">
+                            <p>&copy; @DateTime.Now.Year - MovieApp</p>
+                        </div>
+                    </div>
+                </div>
+
+            </footer>
+        </div>
     </div>
 
     @Scripts.Render("~/bundles/lib")
